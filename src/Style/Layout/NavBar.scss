@@ -1,0 +1,219 @@
+.navbar_container{
+    width: 100%;
+    background: rgba(254, 254, 254, 0.80);
+    // border-top: 3px solid gray;
+}
+.NavBar_container{
+    width: 60%;
+    margin-inline: auto;
+    display: flex;align-items: center;justify-content: space-between;
+    .info{
+        display: flex;align-items: center;
+        width: 45%;
+        height: 90px;
+        .logo_section{
+            display: flex;
+            align-items: center;
+            width: 65%;
+            justify-content: flex-start;
+            .SDNLogo{
+                width: 50px;
+                height: 40px;
+            }
+            .best_partner{
+                margin-left: 10px;
+                .first{  
+                // color: var(--solid-202-d-3-b, #202D3B);
+                color: var(--text);
+                font-family: Fira Sans B;
+                font-size: 1.5vw;
+                font-weight: 700;
+                text-transform: uppercase;
+                }
+                .second{
+                color:  var(--text);
+                font-family: Fira Sans B;
+                font-size: 1.1vw;
+                font-weight: 600;
+                }
+            }
+        }
+        .numder_section{
+            width: 40%;
+            height: 48px;
+            display: flex;flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            border-left: 1px solid var(--text);
+            padding-left: 13px;
+
+            .first, .second{
+                width: 100%;
+                color:  var(--text);
+                // font-family: Fira Sans B;
+                font-size: 14.5px;
+                font-weight: 700;
+                text-transform: capitalize;
+            }
+            .first{
+                font-family: Fira Sans B;
+            }
+            .second{
+                // font-family: Roboto !important;
+                font-size: 13.5px ;
+                font-weight: 400 !important;
+            }
+        }
+    }
+
+    .links{
+        display: flex;justify-content: space-between;align-items: center;
+        width: 40%;
+        .Lung{
+            padding: .2vw .4vw;
+            background: linear-gradient(var(--title), var(--secondary));
+            border-radius: 3px;
+            border: 2px solid #000;
+            cursor: pointer;
+            .switch-left{
+                color: #fff;
+                font-size: 10px;
+                font-weight: bold;
+                display: flex;justify-content: center;align-items: center;
+            }
+        }
+        span, svg{
+            color:  var(--text);
+            text-align: center;
+            // font-family: Fira Sans B;
+            font-size: .9vw;
+            font-weight: 400;
+            text-transform: capitalize;
+            cursor: pointer;
+            svg{
+                font-size: 1vw;
+                font-weight: 700;
+            }
+        }
+        .first_link{
+            font-weight: 700 !important;
+        }
+    }
+}
+
+
+.ar{
+    .links{
+        span, svg{
+            font-size: .8vw;
+            svg{
+                font-size: 1vw;
+            }
+        }
+    }
+}
+
+.ar{
+    .numder_section
+    {
+        .first, .second{
+            text-align: end !important;
+        }
+    }
+}
+
+//res
+
+@include devices(MinLaptop){
+    .NavBar_container{
+        width: 70%;
+        .info{
+            width: 40%;
+        }
+    }
+        .links{
+            width: 50% !important;
+        }
+}
+
+@include devices(SmallLaptop){
+    .NavBar_container{
+        .info{
+            width: 55%;
+        } 
+        .links{
+            span , svg{
+                font-size: 1.1vw;
+            }
+        }   
+    }
+}
+
+@include devices(tablet){
+    .NavBar_container{
+        padding-top: 10px;
+        flex-direction: column;
+        .info{
+            width: 70%;
+            height: 40px ;
+        }
+        .best_partner{
+            .first, .second{
+                font-size: 13px !important;
+            }
+        }
+        .numder_section{
+            width: 50% !important;
+            .first, .second{
+                font-size: 13px !important;
+            }
+            height: 30px !important;
+        }
+        width: 100%;
+        .links{
+            width: 60% !important;
+            span , svg{
+                font-size: 1.6vw;
+            }
+        }
+    }
+}
+
+@include devices (S_mobile){
+    .navbar_container{
+        .best_partner{
+            .first, .second{
+                font-size: 9px !important;
+            }
+        }
+        .numder_section{
+            .first{
+                font-size: 11px !important;
+            }
+            .second{
+                font-size: 10px !important;
+            }
+        }
+        .links{
+            width: 70% !important;
+            span, .svg{
+                font-size: 9px;
+            }
+        }
+    }
+
+}
+
+@include devices (XS_mobile){
+    .navbar_container{
+        .info{
+            width: 80% !important;
+        }
+    }
+    .ar{
+        
+        .links{
+            width: 80% !important;
+        }
+    }
+}

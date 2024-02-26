@@ -1,0 +1,66 @@
+.PartnerPage_container{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 50px !important;
+    display: flex;align-items: center;justify-content: center;flex-direction: column;
+    .PartnerPage_title{
+        color: var(--title);
+        font-family: Fira Sans B;
+        text-align: center;
+        font-size: 60px;
+        font-weight: 700;
+        letter-spacing: 1.8px;
+        margin-bottom: 20px;
+    }
+    .PartnerPage_text{
+        width: 70%;
+        color: var(--solid-202-d-3-b, #202D3B);
+        text-align: center;
+            font-family: Fira Sans B;
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: 0.18px;
+        text-transform: capitalize;
+    }
+    .PartnerPage_logos{
+        width: 100%;
+        margin-inline: auto;
+        display: flex;flex-direction: column;
+        margin-top: 40px;
+        .logo_section {
+            max-width: 100%;
+            display: flex;
+            .logo_container{
+                min-width: 33%; 
+                margin-bottom: 40px;
+                padding: 0px 20px;
+                display: flex;justify-content: center;align-items: center;
+                img{
+                    width: 50%;
+                    object-fit: fill!important;
+                }
+            }
+        } 
+    }
+}
+
+//res
+
+@include devices (mobile){
+    .PartnerPage_container{
+        width: 80% !important;
+        .PartnerPage_title{
+            font-size: 30px !important;
+        }
+        .PartnerPage_text{
+            font-size: 10px !important;
+        }
+    }   
+}
+
+@include devices (iphone_mobile){
+    .PartnerPage_container{
+        width: 90% !important;
+    }
+    
+}

@@ -1,0 +1,28 @@
+.CopyRight_container{
+    width: 100%;
+    margin: auto;
+    height: 10vh;
+    background: var(--secondary);
+    display: flex;justify-content: center;align-items: center;
+    p{
+        color: var(--solid-fefefe, #FEFEFE);
+        // font-family: Open Sans;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.48px;
+        margin-top: 20px;
+        margin-left: 20px;
+        }
+}
+
+//res 
+@include devices (tablet){
+    .CopyRight_container{
+        height: 5vh !important;
+    }
+}
+@include devices (iphone_mobile){
+        p{
+            font-size: 7px !important;
+        }
+}

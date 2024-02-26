@@ -1,0 +1,170 @@
+.main_card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .Card_2{
+        width: 100% ;
+        height: 100% ;
+        .Card_2_Top{
+            width: 100%;
+            height: 100%;
+            display: flex; flex-direction: column;
+           img{
+            background: rgb(255, 255, 255);
+            max-width: 100%;
+            max-height:100%;
+            object-fit: contain !important;
+          }  
+        }
+    }
+    .Card_1, .Card_1_Down{
+        height: 100%;
+        z-index: -1;
+        position: absolute;
+        height: 1.8vw;
+        width: 100%;
+        border-radius: 1vw;
+        cursor: pointer;
+        transition: .4s ease-in-out;
+        background: linear-gradient( var(--secondary),var(--title));
+        display: flex; flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2{
+            text-align: center;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--text);
+            width: 80%;
+            // margin-bottom: 0px;
+        }
+        .TeamCard_P{
+            margin-inline:10px;
+            width: 80%;
+            font-weight: 600;
+            font-size: 10px;
+            color: #fff;
+            margin-bottom: 13px;
+        }
+    }
+    .Card_1_Hovered {
+        flex-direction: column !important;
+        z-index: 1;
+        transform: translateY(-9.5vw);
+        height: 9vw;
+        box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.1);
+        transition: .4s ease-in-out;
+        display: flex;
+        align-items: center;
+    }
+}
+.ar{
+    .TeamCard_P{
+        
+    }
+}
+//res
+
+@include devices(SmallLaptop){
+    .Card_1{
+        line-height: 10px !important;
+        h2{
+            font-size: 19px !important;
+        }
+        .TeamCard_P{
+            font-size: 9px !important; 
+        }
+    }
+}
+
+@include devices(tablet){
+    .Card_1_Hovered{
+        height: 11vw !important;
+        transform: translateY(-11.5vw) !important;
+    }
+    .Card_1{
+        line-height: 4px !important;
+        h2{
+            font-size: 15px !important;
+            margin-bottom: 8px !important;
+        }
+        .TeamCard_P{
+            width: 90% !important;
+            font-size: 8px !important;
+        }
+        .Position{
+            line-height: 15px;
+        }
+    }
+}
+
+@include devices(mobile){
+    .Card_1{
+        line-height: 2px !important;
+        h2{
+            font-size:12px !important;
+            margin-bottom: 4px !important;
+        }
+        .TeamCard_P{
+            font-size: 7.3px !important;
+            line-height: 0px;
+            margin-bottom: 10px;
+        }
+        .Position{
+            line-height: 10px;
+        }
+    }
+}
+
+@include devices(S_mobile){
+    .Card_1{
+        line-height: 0px !important;
+        h2{
+            font-size: 12px !important;
+            margin-bottom: 8px !important;
+        }
+        .TeamCard_P{
+            font-size: 7px !important;
+            margin-bottom: 6px !important;
+        }
+        .Position{
+            line-height: 10px;
+        }
+    }
+}
+
+@include devices(iphone_mobile){
+    .Card_1_Hovered{
+        height: 12.5vw !important;
+        transform: translateY(-13vw) !important;
+    }
+    .Card_1{
+        h2{
+            margin-bottom: 6px !important;
+        }
+        .TeamCard_P{
+            font-size: 5.5px !important;
+            margin-bottom: 6px !important;
+        }
+        .Position{
+            line-height: 8px;
+        }
+    }
+}
+
+@include devices(XS_mobile){
+    .Card_1{
+        h2{
+            font-size: 7px !important;
+            margin-bottom: 8px !important;
+            z-index: 9999 !important;
+        }
+        .TeamCard_P{
+            font-size: 4.5px !important;
+            margin-bottom: 5px !important;
+        }
+        .Position{
+            line-height: 6px;
+        }
+    }
+}
